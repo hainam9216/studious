@@ -5,6 +5,47 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Dark theme button */
+
+/* Light theme */
+#myBody {
+    background-color: white;
+}
+
+#switchButton {
+    background-color: white;
+    font-size: 25px;
+    padding: 10px;
+}
+
+#switchButton .fa-sun {
+    display: none;
+}
+
+#switchButton .fa-moon {
+    display: block;
+    color: #0D369F;
+}
+
+/* Dark Theme*/
+/* .dark#myBody {
+    background-color: black;
+} */
+
+.dark #switchButton {
+    background:none;
+    border: 1px solid white;
+}
+
+.dark #switchButton .fa-sun {
+    display: block;
+    color:#0d369f;
+}
+
+.dark #switchButton .fa-moon {
+    display: none;
+}
+
 /* HEADER  */
 .headerContact {
     background: #0d369f;
@@ -39,7 +80,19 @@
     color: white;
     font-size: 15px;
     font-weight: 500;
+    transition: 0.3s all;
 }
+.headerContact__right ul li:hover a{
+    color: #FF6E65;
+}
+@media screen and (max-width: 992px) {
+
+    .headerContact {
+        position: absolute;
+        visibility: hidden;
+    }
+}
+
 
 .navbar-brand span {
     font-size: 26px;
@@ -56,7 +109,9 @@
 #navbarStudious .nav-item {
     padding: 0 12px;
 }
-
+#navbarStudious .nav-item .nav-link {
+    color: black;
+}
 #navbarStudious .nav-item.active .nav-link {
     color: #ff6e65;
 }
@@ -99,8 +154,50 @@
     color: white;
 }
 
+@media screen and (max-width: 992px) {
 
+    .headerMenu{
+        position: absolute;
+        top: 0px;
+        left: 0;
+        z-index: 1;
+        background: none;
+    }
+}
+@media screen and (max-width: 992px) {
+
+    .navbar-collapse{
+        right: 0;
+    }
+}
 /* CAROUSEL  */
+#carouselStudious{
+    position: relative;
+}
+.carousel-indicators li{
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    opacity: 1;
+}
+.carousel-indicators li:hover{
+    background-color: #FF6E65;
+}
+.carousel-indicators .active{
+    background-color: #ff6e65;
+}
+
+.carousel-button:nth-of-type(1){
+    position: absolute;
+    bottom: 85px;
+    right: 0;
+}
+
+.carousel-button:nth-of-type(2){
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+}
 .carousel-item {
     height: 600px;
     background-size: cover;
@@ -109,15 +206,27 @@
 .carousel-caption {
     right: 55%;
     bottom: 120px;
+    left: 10%;
 }
 
 .carousel-caption h1 {
-    font-size: 70px;
-    line-height: 80px;
+    /* line-height: 80px; */
     font-weight: bold;
     color: #fff;
 }
 
+@media (min-width: 576px) {
+    .carousel-caption h1 { font-size: 1.25rem; }
+}
+@media (min-width: 768px) {
+    .carousel-caption h1 { font-size: 2rem; }
+}
+@media (min-width: 992px) {
+    .carousel-caption h1 { font-size: 3rem; }
+}
+@media (min-width: 1200px) {
+    .carousel-caption h1 { font-size: 4rem; }
+}
 .carousel-caption .btn {
     padding: 14px 30px;
     font-weight: 600;
@@ -136,6 +245,7 @@
 .carousel-caption i {
     margin-left: 10px;
 }
+
 
 /* MIDDLE COURSE  */
 .middleCourse {
@@ -343,7 +453,7 @@ h3.title__main span {
 /*  Numbers */
 .numbers_content {
     max-width: 1200px;
-
+    padding-top: 7rem !important;
 }
 
 .counting_number div:nth-of-type(2) {
@@ -465,12 +575,14 @@ h3.title__main span {
     font-size: 15px;
 }
 
-.instructors_credit,.instructors_credit_2 {
+.instructors_credit,
+.instructors_credit_2 {
     padding-top: 20px;
 
 }
 
-.instructors_credit a h3,.instructors_credit_2 a h3{
+.instructors_credit a h3,
+.instructors_credit_2 a h3 {
     font-size: 20px;
     color: black;
     font-weight: 600;
@@ -488,8 +600,8 @@ h3.title__main span {
     transform: translateY(0);
 }
 
-.instructors_box_content:hover .instructors_credit h3 ,
-.instructors_box_content:hover .instructors_credit_2 a h3{
+.instructors_box_content:hover .instructors_credit h3,
+.instructors_box_content:hover .instructors_credit_2 a h3 {
     color: #FF6E65;
 }
 
@@ -498,7 +610,7 @@ h3.title__main span {
 }
 
 .instructors_credit a:hover,
-.instructors_credit_2 a:hover{
+.instructors_credit_2 a:hover {
     text-decoration: none;
 }
 
